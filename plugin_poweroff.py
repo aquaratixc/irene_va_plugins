@@ -1,41 +1,42 @@
 # Плагин для отключения/перезагрузки компьютера
 # author: Oleg Bakharev (inspired by Vladislav Janvarev)
 
+# Голосовое отключение компьютера
+# author: Oleg Bakharev (inspired by Vladislav Janvarev)
+
 import subprocess
 
 from vacore import VACore
 
-
-
-def start(core:VACore):
+def start(core: VACore):
     manifest = {
-        "name": "Голосовое отключение компьютера",
-        "version": "1.0",
-        "require_online": False,
+        'name': 'Отключение и перезагрузка компьютера',
+        'version': '1.0',
+        'require_online': False,
 
-        "commands": {
-            "выключи компьютер|отключить питание|отключи питание|выключить компьютер|отключение|выключение" :  poweroff,
-            "перезагрузи компьютер|перезагрузить компьютер|перезагрузка" :  reboot,
+        'commands': {
+            'выключи компьютер|отключить питание|отключи питание|выключить компьютер|отключение|выключение':  poweroff,
+            'перезагрузи компьютер|перезагрузить компьютер|перезагрузка':  reboot,
         }
     }
 
     return manifest
     
-    
-def poweroff(core:VACore, phrase: str):
+# отключение питания    
+def poweroff(core: VACore, phrase: str):
 	try:
-		core.play_voice_assistant_speech("Выполняю выключение компьютера")
-		cmd = subprocess.Popen(["poweroff"])
+		core.play_voice_assistant_speech('Выполняю выключение компьютера')
+		cmd = subprocess.Popen(['poweroff'])
 		cmd.wait()
 		return
 	except Exception as e:
 		pass
 		
-		
-def reboot(core:VACore, phrase: str):
+# перезагрузка		
+def reboot(core: VACore, phrase: str):
 	try:
-		core.play_voice_assistant_speech("Выполняю перезагрузку компьютера")
-		cmd = subprocess.Popen(["reboot"])
+		core.play_voice_assistant_speech('Выполняю перезагрузку компьютера')
+		cmd = subprocess.Popen(['reboot'])
 		cmd.wait()
 		return
 	except Exception as e:
