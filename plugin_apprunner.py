@@ -45,7 +45,6 @@ def run_via_irene(core: VACore, phrase: str, param: str):
 	try:
 		core.play_voice_assistant_speech('Запускаю программу')
 		cmd = subprocess.Popen(param.split(' '))
-		cmd.wait()
 		return
 	except Exception as e:
 		core.play_voice_assistant_speech('Не удалось запустить приложение')
