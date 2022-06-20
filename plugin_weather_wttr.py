@@ -33,6 +33,9 @@ def compute_suffix(value: str, variants: list):
 		suffix = variants[0]
 	elif (n == 1):
 		suffix = variants[1]
+		if len(value) >= 2:
+			if value.strip()[-2] == '1':
+				suffix = variants[2]
 	else:
 		suffix = variants[2]
 	return suffix
@@ -114,7 +117,9 @@ def get_weather_forecast(core: VACore, phrase: str):
 		
 	try:
 		core.play_voice_assistant_speech('Прогноз погоды на три дня')
+		
 		weathers = request_weather(location)['weather'] # город или координаты
+		
 		for weather in weathers:
 			# дата на которую прогноз
 			d = weather['date']
