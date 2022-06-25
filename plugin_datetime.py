@@ -52,7 +52,7 @@ def compute_suffix(value: str, variants: list):
 
 # получить текст для описания дня недели
 def get_weekday(date):
-	weekday_list = ('понедельник','вторник','среду','четверг','пятницу','субботу','воскресенье')
+	weekday_list = ('понедельник','вторник','среда','четверг','пятница','суббота','воскресенье')
 	
 	weekday = weekday_list[date.weekday()]
 	return weekday
