@@ -7,7 +7,7 @@ from vacore import VACore
 
 
 
-def start(core:VACore):
+def start(core: VACore):
     manifest = {
         "name": "Управление громкостью через amixer",
         "version": "1.0",
@@ -34,26 +34,26 @@ def pass_arg_to_amixer(arg: str):
 	except Exception as e:
 		pass
     
-def off_volume(core:VACore, phrase: str):
+def off_volume(core: VACore, phrase: str):
 	pass_arg_to_amixer("mute")
 		
 		
-def on_volume(core:VACore, phrase: str):
+def on_volume(core: VACore, phrase: str):
 	pass_arg_to_amixer("unmute")
 		
 		
-def down_volume(core:VACore, phrase: str):
+def down_volume(core: VACore, phrase: str):
 	pass_arg_to_amixer("5%-")
 
 
-def up_volume(core:VACore, phrase: str):
+def up_volume(core: VACore, phrase: str):
 	pass_arg_to_amixer("5%+")
 		
 		
-def maximal_volume(core:VACore, phrase: str):
+def maximal_volume(core: VACore, phrase: str):
 	pass_arg_to_amixer("100%")
 		
 		
-def minimal_volume(core:VACore, phrase: str):
+def minimal_volume(core: VACore, phrase: str):
 	pass_arg_to_amixer("10%")
 
