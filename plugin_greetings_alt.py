@@ -1,5 +1,5 @@
 # Альтернативный модуль приветствий
-# author: Oleg Bakharev (inspired by Vladislav Janvarev )
+# author: Oleg Bakharev (inspired by Vladislav Janvarev)
 
 from datetime import datetime
 import random
