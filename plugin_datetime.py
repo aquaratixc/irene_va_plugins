@@ -1,5 +1,5 @@
 # Дата и время
-# author: Vladislav Janvarev, Oleg Bakharerv
+# author: Vladislav Janvarev, Oleg Bakharev
 
 from datetime import datetime
 import os
