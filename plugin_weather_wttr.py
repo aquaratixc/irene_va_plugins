@@ -47,7 +47,7 @@ def forecast_text(temp: str, humidity: str, pressure: str, wind_speed: str):
 			temp, compute_suffix(temp, ['градусов', 'градус', 'градуса']),
 			humidity, compute_suffix(humidity, ['процентов', 'процент', 'процента']),
 			pressure, compute_suffix(pressure, ['миллиметров', 'миллиметр', 'миллиметра']),
-			wind_speed, compute_suffix(humidity, ['километров', 'километр', 'километра'])
+			wind_speed, compute_suffix(wind_speed, ['километров', 'километр', 'километра'])
 			)
 	return text
 
